@@ -2,14 +2,13 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
-#include "base_types.h"
 #include "LDAApi.h"
 
-INT DimReduction(const double *eigenvector, const double *v, const INT d, double *u, const INT k)
+int DimReduction(const double *eigenvector, const double *v, const int d, double *u, const int k)
 {
 	double *W = (double *)eigenvector;
 	double *y = NULL;
-	INT i, j;
+	int i, j;
 
 	if (W == NULL)
 		return -1;
